@@ -140,7 +140,7 @@ export default function Register() {
           "https://rfpdemo.velsof.com/api/registervendor",
           formData
         );
-
+        // console.log("Category -",formData.category)
         const { token, user } = response.data;
 
         if (token) {
