@@ -54,7 +54,6 @@ const Login = () => {
         // Store token and user ID in localStorage
         localStorage.setItem("token", `Bearer ${token}`);
         localStorage.setItem("user_id", userId); // Save as string if needed
-        console.log(token);
         navigate("/dashboard");
       } else {
         alert("Login failed: Required data not found");
