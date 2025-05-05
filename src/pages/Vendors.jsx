@@ -37,11 +37,11 @@ const Vendor = () => {
       const token = localStorage.getItem("token");
       
       // Make API call to approve vendor
-      const response = await axios.put(
-        "https://rfpdemo.velsof.com/api/rfp/approveVendor",
+      const response = await axios.post(
+        "https://rfpdemo.velsof.com/api/approveVendor",
         {
           user_id: userId,
-          status: "approved",
+          status: "Approved",
         },
         {
           headers: {
