@@ -21,6 +21,7 @@ const AddRFP = () => {
   const [allVendors, setAllVendors] = useState([]);
   const [filteredVendors, setFilteredVendors] = useState([]);
 
+  // Fetch API to see all vendor  name for selected category
   useEffect(() => {
     // For mapping category id and vendor id
     const fetchVendors = async () => {

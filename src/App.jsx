@@ -11,6 +11,7 @@ import Login from "./pages/Login";
 import ListRfp from "./pages/RFP/ListRFP";
 import EditVendorForm from "./pages/editVendor";
 import AddRFP from "./pages/RFP/AddRFP";
+import Categories from "./pages/Categories";
 // import CreateRfp from "./pages/AddRFP";
 
 export default function App() {
@@ -27,7 +28,7 @@ export default function App() {
           {/* <Route path="/create" element={<ListRfp />} />  */}
           <Route path="/rfp" element={<ListRfp />} />
           <Route path="/editvendor" element={<EditVendorForm />} /> 
-          {/* <Route path="/createRFP" element={<CreateRfp />} />  */}
+          <Route path="/categories" element={<Categories />} /> 
           <Route path="/createRFP" element={<AddRFP />} /> 
           
           <Route path="/users" element={<Users />} />

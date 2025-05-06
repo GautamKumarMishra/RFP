@@ -31,7 +31,7 @@ export default function Sidebar() {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="waves-effect">
+                  <a href="/categories" className="waves-effect">
                     <i className="mdi mdi-weather-night"></i>
                     <span>Categories</span>
                   </a>

@@ -66,7 +66,7 @@ const Vendor = () => {
       console.error(err);
     }
   };
-
+  // Pagination
   const startIndex = (currentPage - 1) * entriesPerPage;
   const currentVendors = vendors.slice(startIndex, startIndex + entriesPerPage);
   const totalPages = Math.ceil(vendors.length / entriesPerPage);
@@ -90,8 +90,8 @@ const Vendor = () => {
         <>
           <div className="overflow-x-auto">
             <table className="min-w-full border divide-y divide-gray-200">
-              <thead className="bg-gray-50">
-                <tr>
+              <thead className=" bg-gray-800 h-12">
+                <tr className="text-white">
                   <th className="px-4 py-2">S. No.</th>
                   <th className="px-4 py-2">Name</th>
                   <th className="px-4 py-2">Email</th>
@@ -111,24 +111,24 @@ const Vendor = () => {
                     <td className="px-4 py-2">{vendor.no_of_employees}</td>
                     <td className="px-4 py-2">
                       <span
-                        className={`px-2 py-1 rounded-full text-xs font-medium ${
+                        className={`px-2 py-1 rounded-full text-md font-medium text-white ${
                           vendor.status === "Approved"
-                            ? "bg-green-200 text-green-800"
+                            ? " bg-green-600"
                             : vendor.status === "Pending"
-                            ? "bg-yellow-200 text-yellow-800"
-                            : "bg-red-200 text-red-800"
+                            ? " bg-yellow-600"
+                            : "bg-red-500"
                         }`}
                       >
                         {vendor.status}
                       </span>
                     </td>
-                    <td className="px-4 py-2 space-x-2">
+                    <td className="px-3 py-2 space-x-2">
                       {vendor.status !== "Approved" && (
                         <button
                           onClick={() => approveVendor(vendor.user_id)}
-                          className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-3 rounded"
+                          className="text-green-600 hover:text-green-700 font-semibold py-2 px-3 rounded"
                         >
-                          Approve
+                          APPROVE
                         </button>
                       )}
                     </td>
